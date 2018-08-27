@@ -24,10 +24,6 @@ export HCLOUD_TOKEN=$API_TOKEN
 #
 export HETZNER_REGION=$REGION
 #
-# Ubuntu 18.04 LTS image name:
-#
-export HETZNER_IMAGE=ubuntu-18.04
-#
 # default instance type to use, when type isn't explicitely specified
 #
 export HETZNER_DEFAULT_INSTANCE_TYPE=$DEFAULT_INSTANCE_TYPE

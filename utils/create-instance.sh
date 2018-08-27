@@ -21,11 +21,13 @@ else
 	type=$HETZNER_DEFAULT_INSTANCE_TYPE
 fi
 
+image=`/opt/farm/ext/cloud-client-hetzner/utils/get-ubuntu-image.sh $account`
+
 /opt/farm/ext/cloud-client-hetzner/support/hcloud server create \
 	--name $name \
 	--type $type \
 	--datacenter $HETZNER_REGION \
-	--image $HETZNER_IMAGE \
+	--image $image \
 	--ssh-key $key \
 	|grep IPv4 \
 	|awk '{ print $2 }' \
